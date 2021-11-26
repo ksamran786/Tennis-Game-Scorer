@@ -45,12 +45,6 @@ namespace TennisGameScorer
 
         }
 
-        private void PrintCurrentSetScore()
-        {
-            string scoreMessage = $"Set: {player1.Name}/{player2.Name} \n {player1.GetSetScore()}/{player2.GetSetScore()}";
-            Console.WriteLine(scoreMessage + "\n");
-
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -59,6 +53,14 @@ namespace TennisGameScorer
 
 
             _game.StartGame();
+        }
+
+
+        private void PrintCurrentSetScore()
+        {
+            string scoreMessage = $"Set: {player1.Name}/{player2.Name} \n {player1.GetSetScore()}/{player2.GetSetScore()}";
+            Console.WriteLine(scoreMessage + "\n");
+
         }
 
         private void PrintGameCurrentScore()

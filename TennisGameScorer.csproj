@@ -98,15 +98,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="TennisScoringBoard\GameScorer.cs.meta" />
-    <None Include="TennisScoringBoard\Interfaces.meta" />
-    <None Include="TennisScoringBoard\Interfaces\IGameScorer.cs.meta" />
-    <None Include="TennisScoringBoard\Interfaces\IPlayer.cs.meta" />
-    <None Include="TennisScoringBoard\Interfaces\IRandomWinnerPlayerGenerator.cs.meta" />
-    <None Include="TennisScoringBoard\Interfaces\ITennisGame.cs.meta" />
-    <None Include="TennisScoringBoard\Player.cs.meta" />
-    <None Include="TennisScoringBoard\RandomWinnerPlayerGenerator.cs.meta" />
-    <None Include="TennisScoringBoard\TennisGame.cs.meta" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
