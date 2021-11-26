@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TennisScoring;
 
 namespace TennisGameScorer
 {
@@ -20,9 +21,63 @@ namespace TennisGameScorer
     /// </summary>
     public partial class MainWindow : Window
     {
+        IPlayer player1, player2;
+
+
+        ITennisGame _game;
+
+        int serves = 0;
         public MainWindow()
         {
             InitializeComponent();
+
+            player1 = new Player();
+            player2 = new Player();
+
+            player1.Name = "Roger";
+            player2.Name = "Nadal";
+
+            _game = new TennisGame(player1, player2, new GameScorer());
+
+            var button = new Button() { Content = "myButton" }; // Creating button
+            button.Click += Button_Click; //Hooking up to event
+            MainGrid.Children.Add(button); //Adding to grid or other parent
+
+        }
+
+        private void PrintCurrentSetScore()
+        {
+            string scoreMessage = $"Set: {player1.Name}/{player2.Name} \n {player1.GetSetScore()}/{player2.GetSetScore()}";
+            Console.WriteLine(scoreMessage + "\n");
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PrintCurrentSetScore();
+            PrintGameCurrentScore();
+
+
+            _game.StartGame();
+        }
+
+        private void PrintGameCurrentScore()
+        {
+            if (player1.GetPointsPerGame() == (int)PointsTable.Forty && player2.GetPointsPerGame() == (int)PointsTable.Forty)
+            {
+                Console.WriteLine("DEUCE!");
+            }
+            else if (player1.GetPointsPerGame() == (int)PointsTable.Advantage)
+            {
+                Console.WriteLine($"ADVANTAGE {player1.Name}!");
+            }
+            else if (player2.GetPointsPerGame() == (int)PointsTable.Advantage)
+            {
+                Console.WriteLine($"ADVANTAGE {player2.Name}!");
+            }
+
+            string scoreMessage = $"{player1.Name} - {player1.GetPointsPerGame()}\n{player2.Name} - {player2.GetPointsPerGame()}";
+            Console.WriteLine(scoreMessage);
         }
     }
 }

@@ -1,0 +1,15 @@
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\MainWindow.g.cs
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\App.g.cs
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer_MarkupCompile.cache
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer_MarkupCompile.lref
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.exe.config
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.exe
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.pdb
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.AssemblyReference.cache
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\MainWindow.baml
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.g.resources
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.Properties.Resources.resources
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.GenerateResource.cache
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.CoreCompileInputs.cache
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.exe
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.pdb
