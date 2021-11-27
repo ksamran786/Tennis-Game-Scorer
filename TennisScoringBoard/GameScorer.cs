@@ -1,4 +1,6 @@
-﻿namespace TennisScoring
+﻿using System;
+
+namespace TennisScoring
 {
 
     public enum PointsTable
@@ -37,7 +39,7 @@
                     player1.PointsPerGame++;
                 }
             }
-            else
+            else if (playerWon == 2) // Player Second won
             {
                 if (player2.GetPointsPerGame() >= (int)PointsTable.Forty &&
                      player2.GetPointsPerGame() == player1.GetPointsPerGame() + 2)
@@ -56,6 +58,10 @@
                     //Point gain
                     player2.PointsPerGame++;
                 }
+            }
+            else
+            {
+                throw new InvalidOperationException("Server out of course. Again serve");
             }
         }
 

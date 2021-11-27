@@ -2,6 +2,6 @@
 {
     public interface IRandomWinnerPlayerGenerator
     {
-        int GetPlayerNameWithPoint(IPlayer player1, IPlayer player2);
+        int GetPlayerNameWithPoint();
     }
 }

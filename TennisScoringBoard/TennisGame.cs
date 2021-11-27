@@ -43,7 +43,7 @@ namespace TennisScoring
                 Console.WriteLine("Null Error");
                 return;
             }
-            int WinnerPlayer = _randomPointWinnerPlayer.GetPlayerNameWithPoint(_player1, _player2);
+            int WinnerPlayer = _randomPointWinnerPlayer.GetPlayerNameWithPoint();
             _gameScoreManager.UpdateGameScore(WinnerPlayer, _player1, _player2);
 
             // Update Set points

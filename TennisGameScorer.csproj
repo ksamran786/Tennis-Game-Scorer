@@ -63,7 +63,6 @@
     <Compile Include="TennisScoringBoard\Player.cs" />
     <Compile Include="TennisScoringBoard\RandomWinnerPlayerGenerator.cs" />
     <Compile Include="TennisScoringBoard\TennisGame.cs" />
-    <Compile Include="Tests\TennisGameTests.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
