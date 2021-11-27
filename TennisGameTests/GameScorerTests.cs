@@ -2,7 +2,7 @@
 using System;
 using TennisScoring;
 
-namespace TennisGameTets
+namespace TennisGameTests
 {
     [TestClass]
     public class GameScorerTests

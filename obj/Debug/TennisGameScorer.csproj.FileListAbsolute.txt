@@ -1,11 +1,10 @@
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.exe.config
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.exe
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.pdb
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\MainWindow.g.cs
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\App.g.cs
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer_MarkupCompile.cache
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer_MarkupCompile.lref
-O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.exe.config
-O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.exe
-O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.pdb
-O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.AssemblyReference.cache
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\MainWindow.baml
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.g.resources
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.Properties.Resources.resources
@@ -13,3 +12,12 @@ O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.Genera
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.CoreCompileInputs.cache
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.exe
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.pdb
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.AssemblyReference.cache
+O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.CopyComplete
