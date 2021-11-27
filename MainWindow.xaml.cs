@@ -39,9 +39,6 @@ namespace TennisGameScorer
 
             _game = new TennisGame(player1, player2, new GameScorer());
 
-            var button = new Button() { Content = "myButton" }; // Creating button
-            button.Click += Button_Click; //Hooking up to event
-            MainGrid.Children.Add(button); //Adding to grid or other parent
 
         }
 
@@ -60,6 +57,11 @@ namespace TennisGameScorer
         {
             string scoreMessage = $"Set: {player1.Name}/{player2.Name} \n {player1.GetSetScore()}/{player2.GetSetScore()}";
             Console.WriteLine(scoreMessage + "\n");
+
+        }
+
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
 
         }
 

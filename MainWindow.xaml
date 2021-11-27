@@ -5,11 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TennisGameScorer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Name="MainGrid">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="199*"/>
-            <ColumnDefinition Width="593*"/>
-        </Grid.ColumnDefinitions>
-    </Grid>
+        Title="Tennis Game" Height="800" Width="1280" ResizeMode="NoResize" Background="#FF86B97A">
+
+    <Canvas Name="MainCanvas" HorizontalAlignment="Left" Height="771" Margin="7,5,0,-5" VerticalAlignment="Top" Width="1258" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+        <Button x:Name="ScoreScreen" Content="Score Board" Canvas.Left="310" Canvas.Top="660" Width="200" Height="75" RenderTransformOrigin="0.405,0.333" FontSize="24"/>
+        <Button x:Name="RefereeScreen" Content="Referee" Canvas.Left="760" Canvas.Top="665" Width="200" Height="75" FontSize="24"/>
+        <Image x:Name="icon" Height="175" Source="ScreenPanelsControllers/Images/images.jpg" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0" Width="215" Canvas.Left="1055"/>
+
+        <Canvas x:Name="ScoreBoardCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
+            <Image x:Name="Ground" Height="640" Canvas.Left="185" Width="670" Source="ScreenPanelsControllers/Images/tennis-court-vector-19705078.jpg" Canvas.Top="5"/>
+        </Canvas>
+        <Button x:Name="button" Content="Button" Canvas.Left="880" Canvas.Top="255" Width="85" RenderTransformOrigin="-0.133,2" Height="60" Click="button_Click_1"/>
+
+
+    </Canvas>
+
+
 </Window>
+

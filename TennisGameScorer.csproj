@@ -63,6 +63,7 @@
     <Compile Include="TennisScoringBoard\Player.cs" />
     <Compile Include="TennisScoringBoard\RandomWinnerPlayerGenerator.cs" />
     <Compile Include="TennisScoringBoard\TennisGame.cs" />
+    <Compile Include="Tests\TennisGameTests.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,6 +102,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ScreenPanelsControllers\Images\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ScreenPanelsControllers\Images\tennis-court-vector-19705078.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -50,10 +50,6 @@ namespace TennisScoring
             _gameScoreManager.UpdateSetScores(_player1,_player2);
 
         }
-        public void QuitGame()
-        {
-            throw new System.NotImplementedException();
-        }
 
     }
 }

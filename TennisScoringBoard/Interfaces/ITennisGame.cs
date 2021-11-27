@@ -8,7 +8,6 @@
     {
          void StartGame();
 
-         void QuitGame();
 
     }
 }
