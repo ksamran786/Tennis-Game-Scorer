@@ -21,67 +21,67 @@ namespace TennisGameScorer
     /// </summary>
     public partial class MainWindow : Window
     {
-        IPlayer player1, player2;
+        /// <summary>
+        /// Player object
+        /// </summary>
+        private IPlayer _player1, _player2;
+
+        /// <summary>
+        /// Score Screen UI Controller
+        /// </summary>
+        private IScoreBoardScreenController _scoreScreenController;
 
 
         ITennisGame _game;
 
-        int serves = 0;
         public MainWindow()
         {
             InitializeComponent();
+            _player1 = new Player();
+            _player2 = new Player();
+              
+            _player1.Name = "Roger";
+            _player2.Name = "Nadal";
 
-            player1 = new Player();
-            player2 = new Player();
+            _game = new TennisGame(_player1, _player2, new GameScorer());
 
-            player1.Name = "Roger";
-            player2.Name = "Nadal";
+            _scoreScreenController = new ScoreBoardScreenController(_player1, _player2, _game, PlayGameButton,Player1PointsText, Player2PointsText,GamesPointText);
 
-            _game = new TennisGame(player1, player2, new GameScorer());
-
-
+            RegisterListeners();
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Register Listners for each Button
+        /// </summary>
+        protected void RegisterListeners()
         {
-            PrintCurrentSetScore();
-            PrintGameCurrentScore();
+            ScoreScreenButton.Click += ScoreScreenButton_Click;
+            RefereeScreenButton.Click += RefereeScreenButton_Click;
 
-
-            _game.StartGame();
+            Player1Name.Text = _player1.Name;
+            Player2Name.Text = _player2.Name;
         }
 
-
-        private void PrintCurrentSetScore()
+        /// <summary>
+        /// Score board screen button is clicked
+        /// </summary>
+        private void ScoreScreenButton_Click(object sender, RoutedEventArgs e)
         {
-            string scoreMessage = $"Set: {player1.Name}/{player2.Name} \n {player1.GetSetScore()}/{player2.GetSetScore()}";
-            Console.WriteLine(scoreMessage + "\n");
-
+            ScoreBoardCanvas.Visibility = Visibility.Visible;
+            RefereeScreenCanvas.Visibility = Visibility.Hidden;
         }
 
-        private void button_Click_1(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Referee screen button is clicked
+        /// </summary>
+        private void RefereeScreenButton_Click(object sender, RoutedEventArgs e)
         {
+            ScoreBoardCanvas.Visibility = Visibility.Hidden;
+            RefereeScreenCanvas.Visibility = Visibility.Visible;
 
+            
         }
 
-        private void PrintGameCurrentScore()
-        {
-            if (player1.GetPointsPerGame() == (int)PointsTable.Forty && player2.GetPointsPerGame() == (int)PointsTable.Forty)
-            {
-                Console.WriteLine("DEUCE!");
-            }
-            else if (player1.GetPointsPerGame() == (int)PointsTable.Advantage)
-            {
-                Console.WriteLine($"ADVANTAGE {player1.Name}!");
-            }
-            else if (player2.GetPointsPerGame() == (int)PointsTable.Advantage)
-            {
-                Console.WriteLine($"ADVANTAGE {player2.Name}!");
-            }
-
-            string scoreMessage = $"{player1.Name} - {player1.GetPointsPerGame()}\n{player2.Name} - {player2.GetPointsPerGame()}";
-            Console.WriteLine(scoreMessage);
-        }
     }
 }

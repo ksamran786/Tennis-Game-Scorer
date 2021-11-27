@@ -64,6 +64,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ScreenPanelsControllers\IScoreBoardScreenController.cs" />
+    <Compile Include="ScreenPanelsControllers\ScoreBoardScreenController.cs" />
     <Compile Include="TennisScoringBoard\GameScorer.cs" />
     <Compile Include="TennisScoringBoard\Interfaces\IGameScorer.cs" />
     <Compile Include="TennisScoringBoard\Interfaces\IPlayer.cs" />
@@ -113,10 +115,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ScreenPanelsControllers\Images\images.jpg" />
+    <Resource Include="Resources\Images\images.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ScreenPanelsControllers\Images\tennis-court-vector-19705078.jpg" />
+    <Resource Include="Resources\Images\tennis-court-vector-19705078.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tennis-player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tennis-player-pngrepo-com.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

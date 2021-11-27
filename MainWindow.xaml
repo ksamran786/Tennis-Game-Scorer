@@ -5,17 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TennisGameScorer"
         mc:Ignorable="d"
-        Title="Tennis Game" Height="800" Width="1280" ResizeMode="NoResize" Background="#FF86B97A">
+        Title="Tennis Game" Height="811" Width="1280" ResizeMode="NoResize" Background="#FF86B97A">
 
-    <Canvas Name="MainCanvas" HorizontalAlignment="Left" Height="771" Margin="7,5,0,-5" VerticalAlignment="Top" Width="1258" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
-        <Button x:Name="ScoreScreen" Content="Score Board" Canvas.Left="310" Canvas.Top="660" Width="200" Height="75" RenderTransformOrigin="0.405,0.333" FontSize="24"/>
-        <Button x:Name="RefereeScreen" Content="Referee" Canvas.Left="760" Canvas.Top="665" Width="200" Height="75" FontSize="24"/>
-        <Image x:Name="icon" Height="175" Source="ScreenPanelsControllers/Images/images.jpg" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0" Width="215" Canvas.Left="1055"/>
+    <Canvas Name="MainCanvas" HorizontalAlignment="Left" Height="781" Margin="-2,2,-2,-1" VerticalAlignment="Top" Width="1278" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
 
-        <Canvas x:Name="ScoreBoardCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
-            <Image x:Name="Ground" Height="640" Canvas.Left="185" Width="670" Source="ScreenPanelsControllers/Images/tennis-court-vector-19705078.jpg" Canvas.Top="5"/>
+        <Button x:Name="ScoreScreenButton" Content="Score Board" Canvas.Left="310" Canvas.Top="660" Width="200" Height="75" RenderTransformOrigin="0.405,0.333" FontSize="24"/>
+        <Button x:Name="RefereeScreenButton" Content="Referee" Canvas.Left="760" Canvas.Top="665" Width="200" Height="75" FontSize="24"/>
+        <Image x:Name="icon" Height="175" Source="Resources/Images/images.jpg" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0" Width="215" Canvas.Left="1055"/>
+
+        <Canvas Visibility="Visible" x:Name="ScoreBoardCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
+            <Image x:Name="Ground" Height="640" Canvas.Left="185" Width="670" Source="Resources/Images/tennis-court-vector-19705078.jpg" Canvas.Top="5"/>
+            <Image x:Name="Player1" Width="75" Height="75" Canvas.Left="425" Canvas.Top="90" Source="tennis-player.png"/>
+            <Image x:Name="Player2" Width="75" Height="75" Canvas.Left="550" Canvas.Top="90" Source="tennis-player-pngrepo-com.png"/>
+            <Button x:Name="PlayGameButton" Content="Play Game" Canvas.Left="375" Canvas.Top="20" Width="305" RenderTransformOrigin="-0.133,2" Height="60"  Background="#FF303057" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+            <TextBlock x:Name="Player1Name" Canvas.Left="405" TextWrapping="Wrap" Text="" Canvas.Top="170" VerticalAlignment="Center" Width="120" HorizontalAlignment="Center" Foreground="White" FontSize="24" TextAlignment="Center" FontWeight="Bold" TextDecorations="Underline"/>
+            <TextBlock x:Name="Player2Name" Canvas.Left="530" TextWrapping="Wrap" Text="" Canvas.Top="170" VerticalAlignment="Center" Width="120" HorizontalAlignment="Center" Foreground="White" FontSize="24" TextAlignment="Center" FontWeight="Bold" TextDecorations="Underline"/>
+            <TextBlock x:Name="GamesPointText" Canvas.Left="350" TextWrapping="Wrap" Text="" Canvas.Top="445" VerticalAlignment="Center" Width="350" HorizontalAlignment="Center" Foreground="White" FontSize="72" TextAlignment="Center" FontWeight="Bold" TextDecorations="{x:Null}" Height="125"/>
+            <TextBlock x:Name="Player2PointsText" Canvas.Left="375" TextWrapping="Wrap" Text="" Canvas.Top="280" VerticalAlignment="Center" Width="150" HorizontalAlignment="Center" Foreground="White" FontSize="36" TextAlignment="Center" FontWeight="Bold" TextDecorations="{x:Null}" Height="90"/>
+            <TextBlock x:Name="Player1PointsText" Canvas.Left="525" TextWrapping="Wrap" Text="" Canvas.Top="280" VerticalAlignment="Center" Width="150" HorizontalAlignment="Center" Foreground="White" FontSize="36" TextAlignment="Center" FontWeight="Bold" TextDecorations="{x:Null}" Height="90"/>
         </Canvas>
-        <Button x:Name="Play_Game" Content="Play Game" Canvas.Left="490" Canvas.Top="25" Width="305" RenderTransformOrigin="-0.133,2" Height="60" Click="button_Click_1" Background="#FF303057" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+
+        <Canvas Visibility="Hidden" x:Name="RefereeScreenCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
+        </Canvas>
+
 
 
     </Canvas>
