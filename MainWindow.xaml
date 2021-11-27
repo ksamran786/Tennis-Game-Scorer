@@ -15,7 +15,7 @@
         <Canvas x:Name="ScoreBoardCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
             <Image x:Name="Ground" Height="640" Canvas.Left="185" Width="670" Source="ScreenPanelsControllers/Images/tennis-court-vector-19705078.jpg" Canvas.Top="5"/>
         </Canvas>
-        <Button x:Name="button" Content="Button" Canvas.Left="880" Canvas.Top="255" Width="85" RenderTransformOrigin="-0.133,2" Height="60" Click="button_Click_1"/>
+        <Button x:Name="Play_Game" Content="Play Game" Canvas.Left="490" Canvas.Top="25" Width="305" RenderTransformOrigin="-0.133,2" Height="60" Click="button_Click_1" Background="#FF303057" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
 
 
     </Canvas>
