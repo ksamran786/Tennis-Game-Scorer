@@ -14,20 +14,20 @@ namespace TennisScoring
         /// </summary>
         /// <param name="player1">Player</param>
         /// <param name="player2">Player</param>
-        internal TennisGame(IPlayer player1, IPlayer player2, IGameScorer scoreManager)
+        public TennisGame(IPlayer player1, IPlayer player2, IGameScorer scoreManager)
         {
             if (player1 == null || player2 == null)
             {
-                Console.WriteLine("Players cannot be null");
-                return;
+                throw new InvalidOperationException("player null exceptions.");
+
             }
             _player1 = player1;
             _player2 = player2;
 
             if (scoreManager == null)
             {
-                Console.WriteLine("Score manager cannot be null");
-                return;
+                throw new InvalidOperationException("Score Manager Null Error");
+
             }
 
             _gameScoreManager = scoreManager;
@@ -40,8 +40,8 @@ namespace TennisScoring
         {
             if (_randomPointWinnerPlayer == null)
             {
-                Console.WriteLine("Null Error");
-                return;
+                throw new InvalidOperationException("Random generator Null Error");
+
             }
             int WinnerPlayer = _randomPointWinnerPlayer.GetPlayerNameWithPoint();
             _gameScoreManager.UpdateGameScore(WinnerPlayer, _player1, _player2);
