@@ -64,7 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ScreenPanelsControllers\IRefereePanelController.cs" />
     <Compile Include="ScreenPanelsControllers\IScoreBoardScreenController.cs" />
+    <Compile Include="ScreenPanelsControllers\RefereePanelController.cs" />
     <Compile Include="ScreenPanelsControllers\ScoreBoardScreenController.cs" />
     <Compile Include="TennisScoringBoard\GameScorer.cs" />
     <Compile Include="TennisScoringBoard\Interfaces\IGameScorer.cs" />

@@ -9,14 +9,14 @@
 
     <Canvas Name="MainCanvas" HorizontalAlignment="Left" Height="781" Margin="-2,2,-2,-1" VerticalAlignment="Top" Width="1278" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
 
-        <Button x:Name="ScoreScreenButton" Content="Score Board" Canvas.Left="310" Canvas.Top="660" Width="200" Height="75" RenderTransformOrigin="0.405,0.333" FontSize="24"/>
+        <Button x:Name="ScoreScreenButton" Content="Score Board" Canvas.Left="335" Canvas.Top="670" Width="200" Height="75" RenderTransformOrigin="0.405,0.333" FontSize="24"/>
         <Button x:Name="RefereeScreenButton" Content="Referee" Canvas.Left="760" Canvas.Top="665" Width="200" Height="75" FontSize="24"/>
         <Image x:Name="icon" Height="175" Source="Resources/Images/images.jpg" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0" Width="215" Canvas.Left="1055"/>
 
-        <Canvas Visibility="Visible" x:Name="ScoreBoardCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
+        <Canvas Visibility="Hidden" x:Name="ScoreBoardCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
             <Image x:Name="Ground" Height="640" Canvas.Left="185" Width="670" Source="Resources/Images/tennis-court-vector-19705078.jpg" Canvas.Top="5"/>
-            <Image x:Name="Player1" Width="75" Height="75" Canvas.Left="425" Canvas.Top="90" Source="tennis-player.png"/>
-            <Image x:Name="Player2" Width="75" Height="75" Canvas.Left="550" Canvas.Top="90" Source="tennis-player-pngrepo-com.png"/>
+            <Image x:Name="Player1" Width="75" Height="75" Canvas.Left="425" Canvas.Top="90" Source="Resources/Images/tennis-player.png"/>
+            <Image x:Name="Player2" Width="75" Height="75" Canvas.Left="550" Canvas.Top="90" Source="Resources/Images/tennis-player-pngrepo-com.png"/>
             <Button x:Name="PlayGameButton" Content="Play Game" Canvas.Left="375" Canvas.Top="20" Width="305" RenderTransformOrigin="-0.133,2" Height="60"  Background="#FF303057" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
             <TextBlock x:Name="Player1Name" Canvas.Left="405" TextWrapping="Wrap" Text="" Canvas.Top="170" VerticalAlignment="Center" Width="120" HorizontalAlignment="Center" Foreground="White" FontSize="24" TextAlignment="Center" FontWeight="Bold" TextDecorations="Underline"/>
             <TextBlock x:Name="Player2Name" Canvas.Left="530" TextWrapping="Wrap" Text="" Canvas.Top="170" VerticalAlignment="Center" Width="120" HorizontalAlignment="Center" Foreground="White" FontSize="24" TextAlignment="Center" FontWeight="Bold" TextDecorations="Underline"/>
@@ -25,9 +25,54 @@
             <TextBlock x:Name="Player1PointsText" Canvas.Left="525" TextWrapping="Wrap" Text="" Canvas.Top="280" VerticalAlignment="Center" Width="150" HorizontalAlignment="Center" Foreground="White" FontSize="36" TextAlignment="Center" FontWeight="Bold" TextDecorations="{x:Null}" Height="90"/>
         </Canvas>
 
-        <Canvas Visibility="Hidden" x:Name="RefereeScreenCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
-        </Canvas>
+        <Canvas Visibility="Visible" x:Name="RefereeScreenCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
+            <TextBlock x:Name="Heading" MaxWidth="357" MaxHeight="350" FontWeight="Bold" TextAlignment="Center" Text="Referee Panel" FontSize="48" Canvas.Left="418" Canvas.Top="60" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF28C352" TextDecorations="Underline"/>
+            <Button x:Name="MatchAbandonedButton" Content="Match Abandoned" Canvas.Left="260" Canvas.Top="520" Width="225" Height="75" FontSize="24" RenderTransformOrigin="0.444,0"/>
+            <Button x:Name="ResumeMatchButton" Content="Resume Match" Canvas.Left="545" Canvas.Top="520" Width="225" Height="75" FontSize="24" RenderTransformOrigin="-0.083,1.4"/>
+            <Label x:Name="setCountLabel" Content="Sets Count:" Canvas.Left="270" Canvas.Top="435" Height="50" Width="150" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" RenderTransformOrigin="0.433,1.3"/>
+            <RadioButton x:Name="oneSets" Content="1" Canvas.Left="480" Canvas.Top="420" RenderTransformOrigin="1,-0.333" Height="30" Width="41"  HorizontalAlignment="Center" VerticalAlignment="Center" GroupName="SetsCount" IsChecked="True" Panel.ZIndex="1" Background="White" VerticalContentAlignment="Center">
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton x:Name="TwoThreeSets" Content="2/3" Canvas.Left="580" Canvas.Top="420" RenderTransformOrigin="1,-0.333" Height="30" Width="41" HorizontalAlignment="Center" VerticalAlignment="Center" GroupName="SetsCount" IsChecked="True" Panel.ZIndex="1" Background="White" VerticalContentAlignment="Center">
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton>
 
+            <RadioButton x:Name="ThreeFiveSets" Content="3/5" Canvas.Left="715" Canvas.Top="420" RenderTransformOrigin="1,-0.333" Height="30" Width="41"  HorizontalAlignment="Center" VerticalAlignment="Center" GroupName="SetsCount" IsChecked="True" Panel.ZIndex="1" Background="White" VerticalContentAlignment="Center">
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <Label x:Name="PlayersName" Content="Player Name:" Canvas.Left="160" Canvas.Top="165" Width="185" Height="60" FontSize="24" FontWeight="Bold"/>
+            <TextBox x:Name="Player1InputField" Height="53" Canvas.Left="345" TextWrapping="Wrap" Text="TextBox" Canvas.Top="162" Width="240" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18"/>
+            <TextBox x:Name="Player2InputField" Height="53" Canvas.Left="635" TextWrapping="Wrap" Text="TextBox" Canvas.Top="162" Width="240" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18"/>
+            <Label x:Name="Players1Label" Content="Player 1" Canvas.Left="365" Canvas.Top="215" Width="185" Height="40" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="Players2Label" Content="Player 2" Canvas.Left="665" Canvas.Top="220" Width="185" Height="40" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="PointWinner" Content="Point Winner:" Canvas.Left="150" Canvas.Top="300" Width="185" Height="60" FontSize="24" FontWeight="Bold"/>
+
+            <Button x:Name="Player1WinnerButton" Content="Player 1" Canvas.Left="360" Canvas.Top="290" Width="225" Height="75" FontSize="24" RenderTransformOrigin="0.444,0"/>
+            <Button x:Name="Player2WinnerButton" Content="Player 2" Canvas.Left="640" Canvas.Top="290" Width="225" Height="75" FontSize="24" RenderTransformOrigin="0.444,0"/>
+
+
+        </Canvas>
 
 
     </Canvas>

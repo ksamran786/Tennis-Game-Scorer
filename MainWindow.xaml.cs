@@ -32,6 +32,14 @@ namespace TennisGameScorer
         private IScoreBoardScreenController _scoreScreenController;
 
 
+        /// <summary>
+        /// Referee Screen UI Controller
+        /// </summary>
+        private IRefereePanelController _refereePanelController;
+
+        /// <summary>
+        /// Tennis Game logic
+        /// </summary>
         ITennisGame _game;
 
         public MainWindow()
@@ -45,7 +53,12 @@ namespace TennisGameScorer
 
             _game = new TennisGame(_player1, _player2, new GameScorer());
 
-            _scoreScreenController = new ScoreBoardScreenController(_player1, _player2, _game, PlayGameButton,Player1PointsText, Player2PointsText,GamesPointText);
+            _scoreScreenController = new ScoreBoardScreenController(_player1, _player2, _game, PlayGameButton, Player1Name, Player2Name, Player1PointsText, Player2PointsText,GamesPointText);
+
+            _refereePanelController = new RefereePanelController(_player1, _player2, _game,_scoreScreenController, 
+                                                                 Player1WinnerButton, Player2WinnerButton, ResumeMatchButton,MatchAbandonedButton,
+                                                                 Player1InputField,Player2InputField,
+                                                                 oneSets,TwoThreeSets,ThreeFiveSets);
 
             RegisterListeners();
         }
@@ -59,8 +72,6 @@ namespace TennisGameScorer
             ScoreScreenButton.Click += ScoreScreenButton_Click;
             RefereeScreenButton.Click += RefereeScreenButton_Click;
 
-            Player1Name.Text = _player1.Name;
-            Player2Name.Text = _player2.Name;
         }
 
         /// <summary>
@@ -70,6 +81,7 @@ namespace TennisGameScorer
         {
             ScoreBoardCanvas.Visibility = Visibility.Visible;
             RefereeScreenCanvas.Visibility = Visibility.Hidden;
+            _scoreScreenController.OnEnable();
         }
 
         /// <summary>
@@ -79,8 +91,9 @@ namespace TennisGameScorer
         {
             ScoreBoardCanvas.Visibility = Visibility.Hidden;
             RefereeScreenCanvas.Visibility = Visibility.Visible;
+            _refereePanelController.OnEnable();
 
-            
+
         }
 
     }

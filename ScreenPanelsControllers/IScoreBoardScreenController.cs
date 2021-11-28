@@ -7,5 +7,8 @@ using TennisScoring;
 
 public interface IScoreBoardScreenController
 {
+    void OnEnable();
 
+    void PrintCurrentSetScore();
+    void PrintGameCurrentScore();
 }
