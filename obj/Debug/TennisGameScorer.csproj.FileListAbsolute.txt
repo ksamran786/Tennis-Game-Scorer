@@ -21,3 +21,25 @@ O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPla
 O:\GitHub\TennisGame\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.AssemblyReference.cache
 O:\GitHub\TennisGame\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.CopyComplete
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.exe.config
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.exe
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\bin\Debug\TennisGameScorer.pdb
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\MainWindow.g.cs
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\App.g.cs
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\TennisGameScorer_MarkupCompile.cache
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\TennisGameScorer_MarkupCompile.lref
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\MainWindow.baml
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.g.resources
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.Properties.Resources.resources
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.GenerateResource.cache
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.CoreCompileInputs.cache
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.csproj.CopyComplete
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.exe
+C:\Users\KhawajaSamran\Desktop\New folder\Tennis-Game-Scorer\obj\Debug\TennisGameScorer.pdb

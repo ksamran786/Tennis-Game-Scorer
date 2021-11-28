@@ -121,10 +121,10 @@
     <Resource Include="Resources\Images\tennis-court-vector-19705078.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="tennis-player.png" />
+    <Resource Include="Resources\Images\tennis-player.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="tennis-player-pngrepo-com.png" />
+    <Resource Include="Resources\Images\tennis-player-pngrepo-com.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
