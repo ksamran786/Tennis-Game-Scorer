@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using TennisScoring;
 
@@ -9,15 +8,26 @@ class RefereePanelController : IRefereePanelController
     private readonly ITennisGame _gameManager;
     private readonly IScoreBoardScreenController _scoreBoardScreenController;
 
+    /// <summary>
+    /// Referene to the buttons on canvas
+    /// </summary>
     Button _player1WinButton, _player2WinButton, _matchResumeButton, _matchAbondendedButton, _scoreBoardScreenButton, _refereePanelButton;
 
+    /// <summary>
+    /// Referene to the Text Boxes on canvas
+    /// </summary>
     TextBox _player1NameTextBox, _player2NameTextBox;
 
-    RadioButton _oneSetRadioButton, _twoThreeSetsRadioButton, _threeFiveSetsRadioButton;
 
-
+    /// <summary>
+    /// Information canvas that is shown when the match is 
+    /// abondended
+    /// </summary>
     Canvas _infoCanvas;
 
+    /// <summary>
+    /// Contructor
+    /// </summary>
     public RefereePanelController(IPlayer player1, IPlayer player2, ITennisGame gameManager, IScoreBoardScreenController scoreBoardScreenController,
                                     Button player1WinButton, Button player2WinButton, Button matchResumeButton, Button matchAbondendedButton, Button scoreBoardScreenButton, Button refereePanelButton,
                                     TextBox player1NameTextBox, TextBox player2NameTextBox,
@@ -49,15 +59,13 @@ class RefereePanelController : IRefereePanelController
         //Canvas
         _infoCanvas = infoCanvas;
 
-        // Radio Buttons
-        _oneSetRadioButton = oneSetRadioButton;
-        _twoThreeSetsRadioButton = twoThreeSetsRadioButton;
-        _threeFiveSetsRadioButton = threeFiveSetsRadioButton;
 
         InitializeListners();
     }
 
-
+    /// <summary>
+    /// each time when the canvas is enabled
+    /// </summary>
     public void OnEnable()
     {
         _player1NameTextBox.Text = _player1.Name;

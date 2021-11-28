@@ -36,6 +36,9 @@ namespace TennisScoring
 
         }
 
+        /// <summary>
+        /// BY calling this function the winner is declared.
+        /// </summary>
         public void StartGame()
         {
             if (_randomPointWinnerPlayer == null)
@@ -49,6 +52,10 @@ namespace TennisScoring
 
         }
 
+        /// <summary>
+        /// Update the points table for the winner
+        /// </summary>
+        /// <param name="WinnerPlayer">The player who won the point</param>
         public void PointWinner(int WinnerPlayer)
         {
             _gameScoreManager.UpdateGameScore(WinnerPlayer, _player1, _player2);

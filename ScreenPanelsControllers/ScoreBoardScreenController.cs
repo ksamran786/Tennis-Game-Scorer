@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using TennisScoring;
 
@@ -48,6 +47,9 @@ public class ScoreBoardScreenController : IScoreBoardScreenController
 
     }
 
+    /// <summary>
+    /// each time when the canvas is enabled
+    /// </summary>
     public void OnEnable()
     {
         _player1NameText.Text = _player1.Name;
@@ -68,7 +70,9 @@ public class ScoreBoardScreenController : IScoreBoardScreenController
         _gameManager.StartGame();
     }
 
-
+    /// <summary>
+    /// Show the current set score for both players
+    /// </summary>
     public void PrintCurrentSetScore()
     {
         string scoreMessage = $"{_player1.GetSetScore()} / {_player2.GetSetScore()}";
@@ -76,6 +80,9 @@ public class ScoreBoardScreenController : IScoreBoardScreenController
 
     }
 
+    /// <summary>
+    /// Show the current points score for both players per set
+    /// </summary>
     public void PrintGameCurrentScore()
     {
         _player1PointsScoreText.Text = PointsConversion(_player1.GetPointsPerGame());
