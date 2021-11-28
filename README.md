@@ -11,5 +11,5 @@ The application implements tennis game scoring in C# and WPF for application. Th
 4. You can press on 'Play game' button. This will generate a random winner and the points table will update accordingly. 
 5. The app also offers 'Referee Panel' with commands for the referee to help him during the match to advance the score.
 
-Site: All image resources used in this project are taken randomly from internet.  
+Site: All image resources used in this project are taken randomly from Internet.  
 
