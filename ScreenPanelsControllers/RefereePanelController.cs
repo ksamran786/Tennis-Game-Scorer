@@ -9,17 +9,20 @@ class RefereePanelController : IRefereePanelController
     private readonly ITennisGame _gameManager;
     private readonly IScoreBoardScreenController _scoreBoardScreenController;
 
-    Button _player1WinButton, _player2WinButton, _matchResumeButton, _matchAbondendedButton;
+    Button _player1WinButton, _player2WinButton, _matchResumeButton, _matchAbondendedButton, _scoreBoardScreenButton, _refereePanelButton;
 
     TextBox _player1NameTextBox, _player2NameTextBox;
 
     RadioButton _oneSetRadioButton, _twoThreeSetsRadioButton, _threeFiveSetsRadioButton;
 
 
+    Canvas _infoCanvas;
+
     public RefereePanelController(IPlayer player1, IPlayer player2, ITennisGame gameManager, IScoreBoardScreenController scoreBoardScreenController,
-                                    Button player1WinButton, Button player2WinButton, Button matchResumeButton, Button matchAbondendedButton,
+                                    Button player1WinButton, Button player2WinButton, Button matchResumeButton, Button matchAbondendedButton, Button scoreBoardScreenButton, Button refereePanelButton,
                                     TextBox player1NameTextBox, TextBox player2NameTextBox,
-                                    RadioButton oneSetRadioButton, RadioButton twoThreeSetsRadioButton,RadioButton threeFiveSetsRadioButton)
+                                    RadioButton oneSetRadioButton, RadioButton twoThreeSetsRadioButton,RadioButton threeFiveSetsRadioButton,
+                                    Canvas infoCanvas)
     {
         _player1 = player1;
         _player2 = player2;
@@ -33,6 +36,8 @@ class RefereePanelController : IRefereePanelController
         _player2WinButton = player2WinButton;
         _matchAbondendedButton = matchAbondendedButton;
         _matchResumeButton = matchResumeButton;
+        _scoreBoardScreenButton = scoreBoardScreenButton;
+        _refereePanelButton = refereePanelButton;
 
         //TextBox
         _player1NameTextBox = player1NameTextBox;
@@ -41,12 +46,22 @@ class RefereePanelController : IRefereePanelController
         _player1NameTextBox.Text = _player1.Name;
         _player2NameTextBox.Text = _player2.Name;
 
+        //Canvas
+        _infoCanvas = infoCanvas;
+
         // Radio Buttons
         _oneSetRadioButton = oneSetRadioButton;
         _twoThreeSetsRadioButton = twoThreeSetsRadioButton;
         _threeFiveSetsRadioButton = threeFiveSetsRadioButton;
        
         InitializeListners();
+    }
+
+
+    public void OnEnable()
+    {
+        _player1NameTextBox.Text = _player1.Name;
+        _player2NameTextBox.Text = _player2.Name;
     }
 
     protected void InitializeListners()
@@ -57,15 +72,26 @@ class RefereePanelController : IRefereePanelController
 
         _player1WinButton.Click += Player1PointWinner;
         _player2WinButton.Click += Player2PointWinner;
+
+        _matchAbondendedButton.Click += MatchAbondended;
+        _matchResumeButton.Click += ResumeMatch;
     }
-
-
-    public void OnEnable()
+    protected void ResumeMatch(object sender, RoutedEventArgs e)
     {
-        _player1NameTextBox.Text = _player1.Name;
-        _player2NameTextBox.Text = _player2.Name;
+        _scoreBoardScreenButton.Visibility = Visibility.Visible;
+        _refereePanelButton.Visibility = Visibility.Visible;
+
+        _infoCanvas.Visibility = Visibility.Hidden;
+        _scoreBoardScreenButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
     }
 
+    protected void MatchAbondended(object sender, RoutedEventArgs e)
+    {
+        _scoreBoardScreenButton.Visibility = Visibility.Hidden;
+        _refereePanelButton.Visibility = Visibility.Hidden;
+
+        _infoCanvas.Visibility = Visibility .Visible;
+    }
     protected void Player1NameChanged(object Sender, TextChangedEventArgs e)
     {
         _player1.Name = _player1NameTextBox.Text;

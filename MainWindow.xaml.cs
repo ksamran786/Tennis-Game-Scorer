@@ -56,9 +56,9 @@ namespace TennisGameScorer
             _scoreScreenController = new ScoreBoardScreenController(_player1, _player2, _game, PlayGameButton, Player1Name, Player2Name, Player1PointsText, Player2PointsText,GamesPointText);
 
             _refereePanelController = new RefereePanelController(_player1, _player2, _game,_scoreScreenController, 
-                                                                 Player1WinnerButton, Player2WinnerButton, ResumeMatchButton,MatchAbandonedButton,
+                                                                 Player1WinnerButton, Player2WinnerButton, ResumeMatchButton,MatchAbandonedButton, ScoreScreenButton, RefereeScreenButton,
                                                                  Player1InputField,Player2InputField,
-                                                                 oneSets,TwoThreeSets,ThreeFiveSets);
+                                                                 oneSets,TwoThreeSets,ThreeFiveSets, MatchAbondedCanvas);
 
             RegisterListeners();
         }

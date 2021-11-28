@@ -70,7 +70,9 @@
 
             <Button x:Name="Player1WinnerButton" Content="Player 1" Canvas.Left="360" Canvas.Top="290" Width="225" Height="75" FontSize="24" RenderTransformOrigin="0.444,0"/>
             <Button x:Name="Player2WinnerButton" Content="Player 2" Canvas.Left="640" Canvas.Top="290" Width="225" Height="75" FontSize="24" RenderTransformOrigin="0.444,0"/>
-
+            <Canvas Visibility="Hidden" x:Name="MatchAbondedCanvas" Height="765" Width="1005">
+                <TextBlock x:Name="InfoText" Canvas.Left="25" TextWrapping="Wrap" Text="Match abandoned due to rain." VerticalAlignment="Center" Width="955" HorizontalAlignment="Center" Foreground="Black" FontSize="36" TextAlignment="Center" FontWeight="Bold" TextDecorations="{x:Null}" Height="135" Background="#FF9E9E9E" Canvas.Top="625"/>
+            </Canvas>
 
         </Canvas>
 
