@@ -44,13 +44,18 @@ namespace TennisScoring
 
             }
             int WinnerPlayer = _randomPointWinnerPlayer.GetPlayerNameWithPoint();
-            _gameScoreManager.UpdateGameScore(WinnerPlayer, _player1, _player2);
+            PointWinner(WinnerPlayer);
 
-            // Update Set points
-            _gameScoreManager.UpdateSetScores(_player1,_player2);
 
         }
 
+        public void PointWinner(int WinnerPlayer)
+        {
+            _gameScoreManager.UpdateGameScore(WinnerPlayer, _player1, _player2);
+
+            // Update Set points
+            _gameScoreManager.UpdateSetScores(_player1, _player2);
+        }
     }
 }
 

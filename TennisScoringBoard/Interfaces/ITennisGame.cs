@@ -8,6 +8,8 @@
     {
          void StartGame();
 
+        void PointWinner(int player);
+
 
     }
 }

@@ -21,7 +21,7 @@ class RefereePanelController : IRefereePanelController
     public RefereePanelController(IPlayer player1, IPlayer player2, ITennisGame gameManager, IScoreBoardScreenController scoreBoardScreenController,
                                     Button player1WinButton, Button player2WinButton, Button matchResumeButton, Button matchAbondendedButton, Button scoreBoardScreenButton, Button refereePanelButton,
                                     TextBox player1NameTextBox, TextBox player2NameTextBox,
-                                    RadioButton oneSetRadioButton, RadioButton twoThreeSetsRadioButton,RadioButton threeFiveSetsRadioButton,
+                                    RadioButton oneSetRadioButton, RadioButton twoThreeSetsRadioButton, RadioButton threeFiveSetsRadioButton,
                                     Canvas infoCanvas)
     {
         _player1 = player1;
@@ -53,7 +53,7 @@ class RefereePanelController : IRefereePanelController
         _oneSetRadioButton = oneSetRadioButton;
         _twoThreeSetsRadioButton = twoThreeSetsRadioButton;
         _threeFiveSetsRadioButton = threeFiveSetsRadioButton;
-       
+
         InitializeListners();
     }
 
@@ -90,7 +90,7 @@ class RefereePanelController : IRefereePanelController
         _scoreBoardScreenButton.Visibility = Visibility.Hidden;
         _refereePanelButton.Visibility = Visibility.Hidden;
 
-        _infoCanvas.Visibility = Visibility .Visible;
+        _infoCanvas.Visibility = Visibility.Visible;
     }
     protected void Player1NameChanged(object Sender, TextChangedEventArgs e)
     {
@@ -104,12 +104,12 @@ class RefereePanelController : IRefereePanelController
 
     protected void Player2PointWinner(object sender, RoutedEventArgs e)
     {
-        _player2.PointsPerGame++;
+        _gameManager.PointWinner(2);
     }
 
     protected void Player1PointWinner(object sender, RoutedEventArgs e)
     {
-        _player1.PointsPerGame++;
+        _gameManager.PointWinner(1);
 
     }
 }

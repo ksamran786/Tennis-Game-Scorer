@@ -13,7 +13,7 @@
         <Button x:Name="RefereeScreenButton" Content="Referee" Canvas.Left="760" Canvas.Top="665" Width="200" Height="75" FontSize="24"/>
         <Image x:Name="icon" Height="175" Source="Resources/Images/images.jpg" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0" Width="215" Canvas.Left="1055"/>
 
-        <Canvas Visibility="Hidden" x:Name="ScoreBoardCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
+        <Canvas Visibility="Visible" x:Name="ScoreBoardCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
             <Image x:Name="Ground" Height="640" Canvas.Left="185" Width="670" Source="Resources/Images/tennis-court-vector-19705078.jpg" Canvas.Top="5"/>
             <Image x:Name="Player1" Width="75" Height="75" Canvas.Left="425" Canvas.Top="90" Source="Resources/Images/tennis-player.png"/>
             <Image x:Name="Player2" Width="75" Height="75" Canvas.Left="550" Canvas.Top="90" Source="Resources/Images/tennis-player-pngrepo-com.png"/>
@@ -25,7 +25,7 @@
             <TextBlock x:Name="Player1PointsText" Canvas.Left="525" TextWrapping="Wrap" Text="" Canvas.Top="280" VerticalAlignment="Center" Width="150" HorizontalAlignment="Center" Foreground="White" FontSize="36" TextAlignment="Center" FontWeight="Bold" TextDecorations="{x:Null}" Height="90"/>
         </Canvas>
 
-        <Canvas Visibility="Visible" x:Name="RefereeScreenCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
+        <Canvas Visibility="Hidden" x:Name="RefereeScreenCanvas" Height="650" Canvas.Left="115" Canvas.Top="5" Width="1030">
             <TextBlock x:Name="Heading" MaxWidth="357" MaxHeight="350" FontWeight="Bold" TextAlignment="Center" Text="Referee Panel" FontSize="48" Canvas.Left="418" Canvas.Top="60" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF28C352" TextDecorations="Underline"/>
             <Button x:Name="MatchAbandonedButton" Content="Match Abandoned" Canvas.Left="260" Canvas.Top="520" Width="225" Height="75" FontSize="24" RenderTransformOrigin="0.444,0"/>
             <Button x:Name="ResumeMatchButton" Content="Resume Match" Canvas.Left="545" Canvas.Top="520" Width="225" Height="75" FontSize="24" RenderTransformOrigin="-0.083,1.4"/>
